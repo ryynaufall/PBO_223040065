@@ -1,0 +1,21 @@
+package PBO_M12;
+
+public class KartuKredit extends PembayaranElektronik {
+    private String noKartu;
+    private String cvv;
+
+    public KartuKredit(double jumlah, String noRekening, String noKartu, String cvv) {
+        super(jumlah, noRekening, "Kartu Kredit");
+        this.noKartu = noKartu;
+        this.cvv = cvv;
+    }
+
+    @Override
+    public void proses() {
+        System.out.println("Pembayaran dengan Kartu Kredit sebesar: " + jumlah);
+        System.out.println("Nomor Kartu: " + noKartu);
+        System.out.println("CVV: " + cvv);
+        System.out.println("Nomor Rekening: " + noRekening);
+        System.out.println("Bank: " + bank);
+    }
+}
